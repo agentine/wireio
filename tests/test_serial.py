@@ -11,7 +11,6 @@ import pytest
 from wireio import (
     ByteSize,
     ConfigError,
-    FlowControl,
     Parity,
     Serial,
     SerialConfig,

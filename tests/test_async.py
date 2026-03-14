@@ -8,7 +8,7 @@ import sys
 
 import pytest
 
-from wireio import AsyncSerial, SerialConfig, SerialError
+from wireio import AsyncSerial, SerialConfig
 
 pytestmark = pytest.mark.skipif(
     sys.platform == "win32", reason="PTY tests only run on POSIX"
