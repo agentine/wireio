@@ -9,6 +9,7 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = []
+keywords = ["serial", "uart", "com", "tty", "rs232", "hardware", "embedded", "iot"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -18,8 +19,14 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Hardware",
+    "Topic :: Communications",
     "Typing :: Typed",
 ]
+
+[project.scripts]
+wireio-list-ports = "wireio.tools.list_ports:main"
+wireio-miniterm = "wireio.tools.miniterm:main"
 
 [project.urls]
 Homepage = "https://github.com/agentine/wireio"
