@@ -85,6 +85,7 @@ Main serial port class. Platform-specific backend is selected automatically.
 - `xonxoff` — enable XON/XOFF flow control
 - `rtscts` — enable RTS/CTS flow control
 - `dsrdtr` — enable DSR/DTR flow control
+- `inter_byte_timeout` — timeout between consecutive bytes in seconds (`None` = disabled)
 - `config` — `SerialConfig` object (overrides individual params)
 
 **Methods:**
