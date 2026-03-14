@@ -227,7 +227,7 @@ class Win32Serial(SerialBase):
             flags |= 0x00000200  # fInX
         if self._config.dsrdtr:
             flags |= 0x00000008  # fOutxDsrFlow
-            flags |= 0x00010000  # fDtrControl = DTR_CONTROL_HANDSHAKE
+            flags |= 0x00000020  # fDtrControl = DTR_CONTROL_HANDSHAKE
         dcb.fBitFields = flags
 
         if not kernel32.SetCommState(self._handle, ctypes.byref(dcb)):
