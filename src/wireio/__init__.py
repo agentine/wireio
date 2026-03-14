@@ -11,6 +11,7 @@ from wireio._exceptions import (
     SerialError,
     SerialTimeoutError,
 )
+from wireio._ports import PortInfo, list_ports
 from wireio._types import ByteSize, FlowControl, Parity, StopBits
 
 __all__ = [
@@ -20,6 +21,8 @@ __all__ = [
     "PortNotFoundError",
     "ConfigError",
     "SerialTimeoutError",
+    "PortInfo",
+    "list_ports",
     "Parity",
     "StopBits",
     "ByteSize",
@@ -34,6 +37,10 @@ def _get_serial_class() -> type:
         from wireio._posix import PosixSerial
 
         return PosixSerial
+    if sys.platform == "win32":
+        from wireio._win32 import Win32Serial
+
+        return Win32Serial
     raise SerialError(f"unsupported platform: {sys.platform}")
 
 
