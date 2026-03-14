@@ -36,6 +36,7 @@ packages = ["src/wireio"]
 dev = [
     "mypy>=1.19",
     "pytest>=9.0",
+    "pytest-asyncio>=1.0",
     "ruff>=0.11",
 ]
 

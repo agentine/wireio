@@ -11,11 +11,13 @@ from wireio._exceptions import (
     SerialError,
     SerialTimeoutError,
 )
+from wireio._async import AsyncSerial
 from wireio._ports import PortInfo, list_ports
 from wireio._types import ByteSize, FlowControl, Parity, StopBits
 
 __all__ = [
     "Serial",
+    "AsyncSerial",
     "SerialConfig",
     "SerialError",
     "PortNotFoundError",
